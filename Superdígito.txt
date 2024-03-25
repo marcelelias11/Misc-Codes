@@ -1,0 +1,13 @@
+def superdigito(x):
+    soma=0
+    for i in str(x):
+        soma=soma+int(i)
+    if soma<10:
+        return soma
+    else:
+        return superdigito(soma)
+
+n, k=input().split()
+x=str(n)* int(k)
+resp=superdigito(x)
+print(resp)

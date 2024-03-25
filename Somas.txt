@@ -1,0 +1,23 @@
+n = int(input())
+s=0
+m = int(input())
+if m == 0 or n == 0:
+    print(0)
+   
+elif m>0 and n>0:
+    for i in range(0,m):
+        s = s + n
+    print(s)    
+elif m<0 and n<0:   
+    for i in range(m,0):
+        s = s - n
+    print(s)    
+elif n>0 and m<0:
+    for i in range(m,0):
+        s = s - n
+    print(s)  
+elif n<0 and m>0:
+    for i in range(0,m):
+        s = s + n
+    print(s)    
+ 

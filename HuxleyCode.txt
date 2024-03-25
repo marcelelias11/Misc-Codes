@@ -1,0 +1,11 @@
+dias=0
+teste = int(input())
+for i in range(0,teste):
+         comida=float(input())
+         while comida>=1:
+                r=comida/2
+                comida =comida-r
+                dias=dias+1
+         print(dias, "dias")
+         dias=0
+ 

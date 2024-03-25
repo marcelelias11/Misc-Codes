@@ -1,0 +1,6 @@
+Nicromio: 2,82
+Prata: 40,78* 10^-3
+Grafite: 11,54
+Ouro: 57,45 * 10^-3
+Cobre: 44,11 * 10^-3
+Aluminio: 72,33 * 10^-3

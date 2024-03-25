@@ -1,0 +1,15 @@
+n = str(input())
+s = 0
+s0 = n.count("0")
+s1 = n.count("1")
+s2 = n.count("2")
+s3 = n.count("3")
+s4 = n.count("4")
+s5 = n.count("5")
+s6 = n.count("6")
+s7 = n.count("7")
+s8 = n.count("8")
+s9 = n.count("9")
+
+s = s0+s1+s2+s3+s4+s5+s6+s7+s8+s9
+print(s)

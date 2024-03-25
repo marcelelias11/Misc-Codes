@@ -1,0 +1,14 @@
+a = 0
+b = 13
+while a<b:
+    a = a+1
+    f=1
+    s = int(input())
+    if s>=0 and s<=12:
+        c = s
+        while c>0:
+            f *= c
+            c = c - 1
+        print(f)    
+    else:
+        break

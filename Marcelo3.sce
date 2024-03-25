@@ -1,0 +1,9 @@
+Fi = 35*rand()
+Fj = 35*rand()
+Fk = 35*rand()
+drk = 7*rand()
+dr = drk * -1
+W = (Fk*dr) + (0*(-Fj) + (0*(-Fi)))
+disp("F = " + string(-Fi) + "i + " + string(-Fj) + "j + " + string(Fk) + "k")
+disp("dr = " + string(dr) + "k")
+disp("W = " + string(W))

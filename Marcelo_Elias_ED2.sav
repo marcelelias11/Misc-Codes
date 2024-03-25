@@ -1,0 +1,192 @@
+ ans  =
+
+   1.
+
+--> ax = 50*rand(); //componente x do vetor aceleração
+
+--> ay = -50*rand(); // componente y do vetor aceleração
+
+--> vx0 = 33*rand(); //componente x do vetor velocidade
+
+--> vy0 = 34*rand(); //componente y do vetor velocidade
+
+--> x0 = 25*rand(); //componente x do vetor posição
+
+--> y0 = 24*rand(); //componente y do vetor posição
+
+--> a = [ax; ay] //resposta do item 1
+ a  = 
+
+   32.625674735754728317261
+  -15.380453714169561862946
+
+--> vx = poly([vx0 ax], "t", "c") //primeira resposta do item 2
+ vx  = 
+
+  30.787733503617346286774 +32.625674735754728317261t
+
+--> vy = poly([vy0 ay], "t", "c") //segunda resposta do item 2
+ vy  = 
+
+  7.2964267274364829063416 -15.380453714169561862946t
+
+--> v = [vx; vy] //resposta do item 3
+ v  = 
+
+  30.787733503617346286774 +32.625674735754728317261t
+
+  7.2964267274364829063416 -15.380453714169561862946t
+
+--> t1 = 21*rand() //definição do tempo aleatório no item 4
+ t1  = 
+
+   6.1367599396035075187683
+
+--> horner(vx,t1) // primeira resposta do item 4
+ ans  =
+
+   231.00366722453122747538
+
+--> horner(vy,t1) // segunda resposta do item 4
+ ans  =
+
+  -87.089725478605259922915
+
+--> t2 = 0:500*rand():10; //resposta do item 5
+
+--> plot(t2,[vx vy]) //resposta do item 6
+at line   307 of function plot ( C:\Program Files\scilab-6.1.1\modules\graphics\macros\plot.sci line 320 )
+
+plot: Plot #1: Numbers of x columns and of polynomials must match.
+--> plot(t2,[horner(vx,t2) horner(vy,t2)]) //resposta do item 6
+WARNING: Transposing row vector Y to get compatible dimensions
+WARNING: Transposing data matrix Y to get compatible dimensions
+
+--> plot(t2,[horner(vx,t2) horner(vy,t2)]) //resposta do item 6
+WARNING: Transposing row vector Y to get compatible dimensions
+WARNING: Transposing data matrix Y to get compatible dimensions
+
+--> plot(t2,vx) //primeira resposta do item 6
+
+--> t2 = 0:rand():10; //resposta do item 5
+
+--> plot(t2,[horner(vx,t2) horner(vy,t2)]) //resposta do item 6
+at line   110 of function checkXYPair ( C:\Program Files\scilab-6.1.1\modules\graphics\macros\checkXYPair.sci line 122 )
+at line   317 of function plot        ( C:\Program Files\scilab-6.1.1\modules\graphics\macros\plot.sci line 330 )
+
+plot: Wrong size for input arguments #2 and #3: Incompatible dimensions.
+--> plot(t2,vx) //primeira resposta do item 6
+
+--> plot(t2,vy) //segunda resposta do item 6
+
+--> subplot(2, 2, 1) //resposta do item 6
+
+--> plot(t2,vx) //primeira resposta do item 6
+
+--> subplot(2, 2, 2) //resposta do item 6
+
+--> plot(t2,vy, 5) //segunda resposta do item 6
+
+--> xtitle("Velocidade x Tempo", "Tempo(s)", "Velocidade(m/s)") //resposta do item 7
+
+--> subplot(2, 2, 1) //resposta do item 6
+
+--> plot(t2,vx) //primeira resposta do item 6
+
+--> xtitle("Velocidade x Tempo", "Tempo(s)", "Velocidade(m/s)") //resposta do item 7
+
+--> subplot(2, 2, 2) //resposta do item 6
+
+--> plot(t2,vy, 5) //segunda resposta do item 6
+
+--> xtitle("Velocidade x Tempo", "Tempo(s)", "Velocidade(m/s)") //resposta do item 7
+
+--> v
+ v  = 
+
+  30.787733503617346286774 +32.625674735754728317261t
+
+  7.2964267274364829063416 -15.380453714169561862946t
+
+--> x = integrate("30.787733503617346286774 + 32.625674735754728317261*t", "t", 0, 10*rand())
+ x  = 
+
+   282.26105145214779668095
+
+--> y = integrate("7.2964267274364829063416 - 15.380453714169561862946 * t", "t", 0, 10*rand())
+ y  = 
+
+  -227.58594217902353307181
+
+--> //respostas do item 8
+
+--> t3 = 10*rand();
+
+--> x = integrate("30.787733503617346286774 + 32.625674735754728317261*t", "t", 0, t3)
+ x  = 
+
+   564.73842406608241617505
+
+--> y = integrate("7.2964267274364829063416 - 15.380453714169561862946 * t", "t", 0, t3)
+ y  = 
+
+  -156.84321261405031577851
+
+--> //respostas do item 8
+
+--> x2 = poly([x0 vx0 ax], "t", "c")
+ x2  = 
+
+  7.816049922257661819458 +30.787733503617346286774t +32.625674735754728317261t²
+
+--> horner(x2,t3)
+ ans  =
+
+   982.88189751762331525242
+
+--> y2 = poly([y0 vy0 ay], "t", "c")
+ y2  = 
+
+  8.6792664192616939544678 +7.2964267274364829063416t -15.380453714169561862946t²
+
+--> horner(y2,t3)
+ ans  =
+
+  -341.60123128885879850714
+
+--> x2 = poly([x0 vx0 ax/2], "t", "c")
+ x2  = 
+
+  7.816049922257661819458 +30.787733503617346286774t +16.31283736787736415863t²
+
+--> horner(x2,t3)
+ ans  =
+
+   572.55447398834007799451
+
+--> y2 = poly([y0 vy0 ay/2], "t", "c")
+ y2  = 
+
+  8.6792664192616939544678 +7.2964267274364829063416t -7.6902268570847809314728t²
+
+--> horner(y2,t3)
+ ans  =
+
+  -148.16394619478859340234
+
+--> abs(x-x2) //diferença entre integral e calculo manual
+ ans  =
+
+  556.92237414382475435559 +30.787733503617346286774t +16.31283736787736415863t²
+
+--> abs(x - horner(x2,t3)) //diferença entre integral e calculo manual
+ ans  =
+
+   7.816049922257661819458 
+
+--> abs(y - horner(y2,t3)) //diferença entre integral e calculo manual
+ ans  =
+
+   8.6792664192617223761772
+
+--> diary(0)

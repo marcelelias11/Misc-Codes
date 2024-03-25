@@ -1,0 +1,16 @@
+a = 0
+s = 0
+while True:
+    a = a + 1
+    n = int(input())
+    if n > 0:   
+        s = s + n
+        m = s / a
+    elif n ==0:
+        break
+if m<=110:
+    print("Glicose Normal")
+elif m >= 200:
+    print("Glicose Muito Alta")  
+elif m>110 and m<200:
+    print("Glicose Alterada")    
